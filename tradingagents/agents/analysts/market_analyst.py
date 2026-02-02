@@ -6,7 +6,6 @@ from tradingagents.dataflows.config import get_config
 
 
 def create_market_analyst(llm):
-
     def market_analyst_node(state):
         current_date = state["trade_date"]
         ticker = state["company_of_interest"]
@@ -76,7 +75,7 @@ Volume-Based Indicators:
 
         if len(result.tool_calls) == 0:
             report = result.content
-       
+
         return {
             "messages": [result],
             "market_report": report,

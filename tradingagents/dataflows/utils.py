@@ -6,6 +6,7 @@ from typing import Annotated
 
 SavePathType = Annotated[str, "File path to save data. If None, data is not saved."]
 
+
 def save_output(data: pd.DataFrame, tag: str, save_path: SavePathType = None) -> None:
     if save_path:
         data.to_csv(save_path)
@@ -27,7 +28,6 @@ def decorate_all_methods(decorator):
 
 
 def get_next_weekday(date):
-
     if not isinstance(date, datetime):
         date = datetime.strptime(date, "%Y-%m-%d")
 
