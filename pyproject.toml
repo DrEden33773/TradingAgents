@@ -33,3 +33,7 @@ dependencies = [
     "typing-extensions>=4.14.0",
     "yfinance>=0.2.63",
 ]
+
+[tool.ruff.lint]
+# 忽略未使用的导入规则 (F401), 忽略未使用的参数规则 (F403)
+ignore = ["F401", "F403"]
